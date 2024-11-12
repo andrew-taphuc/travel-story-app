@@ -19,8 +19,7 @@ npm i react-router-dom
 
 in foler backend:
 cd backend
-npm i express jsonwebtoken mongoose nodemon dotenv cors bcrypt
-npm i multer
+npm i express jsonwebtoken mongoose nodemon dotenv cors bcrypt multer
 
 cd ra folder TravelStory-MERN: node -e "console.log(require('crypto').randomBytes(64).toString('hex'))" sẽ ra một string, gán string đó cho 
 ACCESS_TOKEN_SECRET ở trong file .env
