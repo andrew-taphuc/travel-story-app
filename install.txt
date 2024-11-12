@@ -1,0 +1,26 @@
+npm create vite@latest travel-story-app
+cd travel-story-app
+npm install
+npm run dev
+
+//import the gg font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+- in travel-story-app folder
+//instal tailwindCSS 
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+npm i react-router-dom 
+
+- in file tailwind.config.js:
++ in content, paste: 
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+
+in foler backend:
+cd backend
+npm i express jsonwebtoken mongoose nodemon dotenv cors bcrypt
+npm i multer
+
+cd ra folder TravelStory-MERN: node -e "console.log(require('crypto').randomBytes(64).toString('hex'))" sẽ ra một string, gán string đó cho 
+ACCESS_TOKEN_SECRET ở trong file .env
