@@ -4,9 +4,7 @@
       {
         "src": "./index.js",
         "use": "@vercel/node",
-        "env": {
-        "MONGO_URI": "@mongo_uri"
-      }
+
       }
     ],
     "routes": [
