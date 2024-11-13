@@ -20,7 +20,7 @@ const TravelStory = require("./models/travelStory.model");
 let mongoConnectionStatus = "Connecting to MongoDB...";
 
 // Connect to MongoDB and update status
-mongoose.connect(config.connectionString)
+mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         mongoConnectionStatus = "Successfully connected to MongoDB";
     })
