@@ -21,6 +21,12 @@ const app = express();
 app.use(express.json());
 app.use(cors({ origin: "*" }));
 
+
+// Welcome
+app.get('/', (req, res) => {
+  res.send('Welcome to the homepage!');
+});
+
 // Create Account
 app.post("/create-account", async (req, res) => {
   const { fullName, email, password } = req.body;
