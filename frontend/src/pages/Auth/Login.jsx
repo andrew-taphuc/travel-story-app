@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";// remove import React
 import PasswordInput from "../../components/Input/PasswordInput";
 import { useNavigate } from "react-router-dom";
 import { validateEmail } from "../../utils/helper";
