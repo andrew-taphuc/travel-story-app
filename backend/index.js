@@ -16,14 +16,28 @@ const TravelStory = require("./models/travelStory.model");
 
 // mongoose.connect(config.connectionString);
 
+// Variable to store MongoDB connection status
+let mongoConnectionStatus = "Connecting to MongoDB...";
+
+// Connect to MongoDB and update status
 mongoose.connect(config.connectionString)
-    .then(() => console.log("Successfully connected to MongoDB"))
-    .catch((error) => console.error("MongoDB connection error:", error));
+    .then(() => {
+        mongoConnectionStatus = "Successfully connected to MongoDB";
+    })
+    .catch((error) => {
+        mongoConnectionStatus = `MongoDB connection error: ${error.message}`;
+    });
+
+
 
 const app = express();
 app.use(express.json());
 app.use(cors({ origin: "*" }));
 
+// Display connection status on screen
+app.get('/status', (req, res) => {
+  res.send(mongoConnectionStatus);
+});
 
 // Welcome
 app.get('/', (req, res) => {
