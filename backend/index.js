@@ -14,7 +14,11 @@ const { authenticateToken } = require("./utilities");
 const User = require("./models/user.model");
 const TravelStory = require("./models/travelStory.model");
 
-mongoose.connect(config.connectionString);
+// mongoose.connect(config.connectionString);
+
+mongoose.connect(config.connectionString)
+    .then(() => console.log("Successfully connected to MongoDB"))
+    .catch((error) => console.error("MongoDB connection error:", error));
 
 const app = express();
 app.use(express.json());
