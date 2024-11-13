@@ -23,7 +23,8 @@ app.use(cors({ origin: "*" }));
 
 // Welcome
 app.get('/', (req, res) => {
-  res.send('Welcome to the homepage!');
+  // res.send('Welcome to the homepage!');
+  res.send(`${process.env.MONGO_URI}`);
 });
 
 // Create Account
